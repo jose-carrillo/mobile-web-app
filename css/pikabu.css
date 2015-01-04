@@ -132,12 +132,12 @@ html,body {
 	display:none;
 }
 
-.m-pikabu-left-visible .m-pikabu-viewport {
+.m-pikabu-left-visible .m-pikabu-viewport, .m-pikabu-right-visible .m-pikabu-viewport {
 	height:100%!important;
 	overflow-y:hidden;
 }
 
-.m-pikabu-left-visible .m-pikabu-sidebar {
+.m-pikabu-left-visible .m-pikabu-sidebar, .m-pikabu-right-visible .m-pikabu-sidebar {
 	height:100%!important;
 	overflow-y:scroll;
 	-webkit-overflow-scrolling:touch;
