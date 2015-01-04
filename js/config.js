@@ -1,51 +1,42 @@
 $(function() {
+	checkDeviceStandAlone();
 	pikabu = new Pikabu();
 });
 $(window).on("orientationchange", function() {
 	pikabu.closeSidebars();
 });
 
-$(window).scroll(function(){
-  var sticky = $('.sticky'),
-      scroll = $(window).scrollTop();
 
-  if (scroll >= 50) sticky.prependTo('body').addClass('fixed');
-  else sticky.prependTo('.m-pikabu-container').removeClass('fixed');
-});
+function checkDeviceStandAlone() {
+	$(window).scroll(function() {
+		var sticky = $('.sticky'),
+			scroll = $(window).scrollTop();
+		if (scroll >= 50) sticky.prependTo('body').addClass('fixed');
+		else sticky.prependTo('.m-pikabu-container').removeClass('fixed');
+	});
 
 
-if (window.navigator.standalone == true) {
-	module.exports = function(el) {
-	  el.addEventListener('touchstart', function() {
-	    var top = el.scrollTop
-	      , totalScroll = el.scrollHeight
-	      , currentScroll = top + el.offsetHeight
-
-	    //If we're at the top or the bottom of the containers
-	    //scroll, push up or down one pixel.
-	    //
-	    //this prevents the scroll from "passing through" to
-	    //the body.
-	    if(top === 0) {
-	      el.scrollTop = 1
-	    } else if(currentScroll === totalScroll) {
-	      el.scrollTop = top - 1
-	    }
-	  })
-
-	  el.addEventListener('touchmove', function(evt) {
-	    //if the content is actually scrollable, i.e. the content is long enough
-	    //that scrolling can occur
-	    if(el.offsetHeight < el.scrollHeight)
-	      evt._isScroller = true
-	  })
+	if (window.navigator.standalone == true) {
+		var overflow = function(el) {
+				el.addEventListener('touchstart', function() {
+					var top = el.scrollTop,
+						totalScroll = el.scrollHeight,
+						currentScroll = top + el.offsetHeight
+					if (top === 0) {
+						el.scrollTop = 1
+					} else if (currentScroll === totalScroll) {
+						el.scrollTop = top - 1
+					}
+				})
+				el.addEventListener('touchmove', function(evt) {
+					if (el.offsetHeight < el.scrollHeight) evt._isScroller = true
+				})
+			}
+		overflow(document.querySelector('.m-pikabu-viewport'));
+		document.body.addEventListener('touchmove', function(evt) {
+			if (!evt._isScroller) {
+				evt.preventDefault()
+			}
+		});
 	}
-
-	document.body.addEventListener('touchmove', function(evt) {
-	  //In this case, the default behavior is scrolling the body, which
-	  //would result in an overflow.  Since we don't want that, we preventDefault.
-	  if(!evt._isScroller) {
-	    evt.preventDefault()
-	  }
-	})
 }
