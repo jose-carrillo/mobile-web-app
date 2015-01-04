@@ -41,7 +41,7 @@ header {
 }
 
 .scroll {
-	/* position:absolute; */
+	position:absolute;
 	overflow-y:scroll;
 	-webkit-overflow-scrolling: touch;
 	top:0;
