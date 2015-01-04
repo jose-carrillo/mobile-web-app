@@ -2,12 +2,14 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   min-height: 2000px;
   padding-top: 70px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -16,10 +18,29 @@ body {
   height: 60px;
   background-color: #f5f5f5;
 }
+
 .container {
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
 }
+
 .course-title {
 
+}
+
+.full-width-img {
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+	margin: 1em auto;
+	text-align: center;
+}
+
+.logo-holder {
+	width: 100%;
+}
+
+.list-type-none {
+	list-style-type: none;
+	margin-left: -40px;
 }
