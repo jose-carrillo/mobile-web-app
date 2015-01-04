@@ -283,13 +283,23 @@ section ul {
 }
 
 @media all and (min-width: 769px) {
+	* {
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
 	html {
 		position:relative;
 		height:100%;
+		padding:0;
+		margin:0;
 	}
 
 	body {
 		min-height:100%;
+		overflow-x:hidden;
+		padding:0;
+		margin:0;
 	}
 
 	.m-pikabu-viewport {
@@ -319,20 +329,6 @@ section ul {
 		width:60%;
 	}
 
-	* {
-		-webkit-box-sizing:border-box;
-		box-sizing:border-box;
-	}
-
-	body {
-		overflow-x:hidden;
-	}
-
-	html,body {
-		padding:0;
-		margin:0;
-	}
-
 	.m-pikabu-viewport {
 		position:relative;
 		overflow:hidden;
@@ -346,14 +342,7 @@ section ul {
 		will-change:overflow;
 	}
 
-	.m-pikabu-right {
-		overflow:auto;
-		height:auto;
-		-webkit-overflow-scrolling:touch;
-		-ms-overflow-style:none;
-	}
-
-	.m-pikabu-left {
+	.m-pikabu-right, .m-pikabu-left {
 		overflow:auto;
 		height:auto;
 		-webkit-overflow-scrolling:touch;
@@ -363,9 +352,5 @@ section ul {
 	.m-pikabu-container {
 		overflow:auto;
 		height:auto;
-	}
-
-	.m-pikabu-overflow-touch {
-		-webkit-overflow-scrolling:touch;
 	}
 }
