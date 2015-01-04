@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.m-pikabu-nav-toggle::after {
+	text-align:center;
+	text-indent:0;
+
+}
+
+.m-pikabu-nav-toggle[data-role="right"]::after {
+
+}
+
+.m-pikabu-left-visible .m-pikabu-nav-toggle[data-role="left"],.m-pikabu-right-visible .m-pikabu-nav-toggle[data-role="right"] {
+
+}
+
+.m-pikabu-sidebar {
+	padding:10px;
+}
+
+.m-pikabu-container {
+
+}
