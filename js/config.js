@@ -8,6 +8,7 @@ $(window).on("orientationchange", function() {
 
 $(window).scroll(function() {
 	var sticky = $('.sticky'),
+		scroller =  $('.m-pikabu-viewport'),
 		scroll = $(window).scrollTop();
 	if (scroll >= 50) sticky.prependTo('body').addClass('fixed');
 	else sticky.prependTo('.m-pikabu-container').removeClass('fixed');
@@ -30,7 +31,7 @@ function checkDeviceStandAlone() {
 					if (el.offsetHeight < el.scrollHeight) evt._isScroller = true
 				})
 			}
-		overflow(document.querySelector('.m-pikabu-viewport'));
+		overflow(document.querySelector('.scroll'));
 		document.body.addEventListener('touchmove', function(evt) {
 			if (!evt._isScroller) {
 				evt.preventDefault()
