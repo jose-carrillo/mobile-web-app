@@ -1,7 +1,7 @@
 .m-pikabu-left,.m-pikabu-right {
 	color: #424242;
 	z-index: 2;
-	background: url(../images/concrete.png);
+	background: url(../img/concrete.png);
 	background-size: 100px 100px;
 }
 
@@ -115,12 +115,12 @@ background-clip: padding-box;
 }
 
 #header {
-background: -moz-linear-gradient(top, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.02) 100%), url(../images/concrete-overlay.png);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.02)), color-stop(100%,rgba(0,0,0,0.02))), url(../images/concrete-overlay.png);
-background: -webkit-linear-gradient(top, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%), url(../images/concrete-overlay.png);
-background: -o-linear-gradient(top, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%),url(../images/concrete-overlay.png);
-background: -ms-linear-gradient(top, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%),url(../images/concrete-overlay.png);
-background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%),url(../images/concrete-overlay.png);
+background: -moz-linear-gradient(top, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.02) 100%), url(../img/concrete-overlay.png);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.02)), color-stop(100%,rgba(0,0,0,0.02))), url(../img/concrete-overlay.png);
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%), url(../img/concrete-overlay.png);
+background: -o-linear-gradient(top, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%),url(../img/concrete-overlay.png);
+background: -ms-linear-gradient(top, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%),url(../img/concrete-overlay.png);
+background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%,rgba(0,0,0,0.02) 100%),url(../img/concrete-overlay.png);
 background-color: #383B3D;
 background-size: 100%, 100px 100px, auto;
 color: #fff;
