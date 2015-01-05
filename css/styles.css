@@ -11,7 +11,7 @@ html,body {
 }
 
 body {
-	overflow-x:hidden;
+	overflow:hidden;
 }
 
 header {
@@ -207,7 +207,6 @@ header a:link,header a:hover {
 
 	body {
 		min-height:100%;
-		overflow-x:hidden;
 		padding:0;
 		margin:0;
 	}
