@@ -120,7 +120,7 @@ header a:link,header a:hover {
 
 .m-pikabu-container {
 	background:rgba(255,255,255,1);
-	overflow-y:scroll;
+	overflow-y:scroll !important;
 	-webkit-overflow-scrolling:touch;
 }
 
@@ -288,7 +288,7 @@ header a:link,header a:hover {
 
 .m-pikabu-left-visible .m-pikabu-sidebar, .m-pikabu-right-visible .m-pikabu-sidebar {
 	height:100%!important;
-	overflow-y:scroll;
+	overflow-y:scroll !important;
 	-webkit-overflow-scrolling:touch;
 	z-index: 8;
 }
