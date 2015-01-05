@@ -278,6 +278,10 @@ header a:link,header a:hover {
 	}
 }
 
+.main-content .jumbotron {
+	margin-top: 1em;
+}
+
 .m-pikabu-overlay {
 	/* background:rgba(0,0,0,0.5); */
 }
