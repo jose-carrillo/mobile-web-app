@@ -49,12 +49,12 @@ section {
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	padding:10px;
-	background:#6b645c;
-	color:#fff;
+	background:rgba(255,255,255,1);
+	color:rgba(0,0,0,1);
 }
 
 .m-pikabu-container {
-	background:#fcfdf4;
+	background:rgba(255,255,255,1);
 	z-index: 9;
 	-webkit-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
