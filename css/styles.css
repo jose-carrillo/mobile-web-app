@@ -106,7 +106,7 @@ header a:link,header a:hover {
 	box-shadow:inset 0 1px 2px rgba(0,0,0,0.5),0 1px 1px rgba(255,255,255,0.15),0 0 1px rgba(255,255,255,0.15);
 }
 
-section {
+.main-content {
 }
 
 .m-pikabu-sidebar {
@@ -120,39 +120,35 @@ section {
 
 .m-pikabu-container {
 	background:rgba(255,255,255,1);
-	z-index: 9;
-	-webkit-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
 	overflow-y:scroll;
 	-webkit-overflow-scrolling:touch;
 }
 
-section h2 {
+.main-content h2 {
 	display:block;
 }
 
-section h3 {
+.main-content h3 {
 	display:block;
 }
 
-section p {
+.main-content p {
 }
 
-section p em {
+.main-content p em {
 }
 
-section a {
+.main-content a {
 }
 
-section a:hover {
+.main-content a:hover {
 	-webkit-transition:color .1s linear;
 	-moz-transition:color .1s linear;
 	-o-transition:color .1s linear;
 	transition:color .1s linear;
 }
 
-section ul {
+.main-content ul {
 	margin:15px 0;
 }
 
@@ -190,6 +186,15 @@ section ul {
 .no-js .m-pikabu-container {
 	margin-left:20%;
 	width:60%;
+}
+
+@media all and (max-width: 768px) {
+	.m-pikabu-container {
+		z-index: 9;
+		-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+		-moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+		box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+	}
 }
 
 @media all and (min-width: 769px) {
@@ -232,6 +237,8 @@ section ul {
 	.m-pikabu-container {
 		margin-left:20%;
 		width:60%;
+		border-left: 1px solid #CCC;
+		border-right: 1px solid #CCC;
 	}
 
 	.m-pikabu-viewport {
@@ -258,6 +265,17 @@ section ul {
 		overflow:auto;
 		height:auto;
 	}
+
+	header {
+		position:absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+
+	.main-content, .m-pikabu-sidebar {
+		margin-top: 40px;
+	}
 }
 
 .m-pikabu-overlay {
@@ -280,3 +298,6 @@ section ul {
 	display:none;
 }
 
+.main-content .container {
+	width: 95% !important;
+}
